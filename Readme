@@ -1,0 +1,32 @@
+# Web Server Application - Print "Im Ofir.."
+
+This simple web server application prints the message "Im Ofir..." when accessed. It is built using Node.js.
+
+## Running the Application Locally
+
+notice that before running the docker you have download the following programs:
+NodeJs, docker and login to your docker user.
+
+Building a Docker image involves creating a Dockerfile that defines the image's contents and 
+configuration and then using the docker build command to build the image
+ 
+ to create dockerfile:
+ -# Use an official Node.js runtime as a base image
+ -# Set the working directory in the container
+ -# Install application dependencies
+ -# Copy the application code to the container
+ -# Define the command to run your application
+ 
+ After building the Dockerfile, build the Docker image with the build command.
+ After that, you can use the run command
+ 
+since i already uploded the docker image to the dockerhub,we can just run the 2 following command:
+sudo docker pull ofirdabah/devops_intern
+sudo docker run -it -p 8080:3000 --name node-app ofirdabah/devops_intern
+
+
+difficulties: 
+
+Run docker in Windows so that it works in Linux - I understood that some software was required, so I decided to use a virtual machine (which caused a delay because I had to download and install the operating system)
+
+Another difficulty was routing a port from the host to Docker, I used a YouTube guide that helped me find the solution by running a command that would do the routing

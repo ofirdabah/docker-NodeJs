@@ -1,0 +1,13 @@
+Deployment steps:
+
+open terminal 
+
+type the 3 following command in the terminal in the following order:
+
+sudo docker login(enter username and password)
+sudo docker pull ofirdabah/devops_intern
+sudo docker run -it -p 8080:3000 --name node-app ofirdabah/devops_intern
+
+enter the link on the terminal and watch the note,
+To see if the application works, I mapped port 8080 to 3000 in Docker so that what will be displayed on the host in 8080 reflects 3000 in Docker.
+
